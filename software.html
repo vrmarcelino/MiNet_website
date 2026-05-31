@@ -5,6 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software | Microbial Networks Lab</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .software-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .software-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: #fff;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .software-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -4px rgba(0, 0, 0, 0.08);
+        }
+
+        .software-card-accent {
+            width: 6px;
+            flex-shrink: 0;
+            background: var(--primary-color);
+        }
+
+        .software-card-body {
+            padding: 1.6rem 1.8rem;
+            flex: 1;
+        }
+
+        .software-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .software-card-top h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .software-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.97rem;
+        }
+
+        .software-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .software-meta .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 0.88rem;
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 0.25rem 0.6rem;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .software-meta .github-link:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .software-meta .github-link svg {
+            flex-shrink: 0;
+        }
+
+        .dev-tag {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .dev-tag span {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .page-title {
+            padding: 3rem 0 1.5rem 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,35 +127,81 @@
         </section>
 
         <section class="software-grid">
+
             <div class="software-card">
-                <div class="software-header">
-                    <h2>CCMetagen</h2>
-                    <a href="https://github.com/vrmarcelino/CCMetagen" target="_blank" class="github-btn">View on GitHub</a>
+                <div class="software-card-accent"></div>
+                <div class="software-card-body">
+                    <div class="software-card-top">
+                        <h2>CCMetagen</h2>
+                    </div>
+                    <p>A comprehensive and accurate microbiome classification pipeline for the identification of eukaryotes and prokaryotes in metagenomic data.</p>
+                    <div class="software-meta">
+                        <a href="https://github.com/vrmarcelino/CCMetagen" target="_blank" class="github-link">
+                            <svg height="14" viewBox="0 0 16 16" width="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                            github.com/vrmarcelino/CCMetagen
+                        </a>
+                        <span class="dev-tag">Lead developer: <span>VR Marcelino</span></span>
+                    </div>
                 </div>
-                <p>A comprehensive and accurate microbiome classification pipeline for the identification of eukaryotes and prokaryotes in metagenomic data.</p>
             </div>
 
             <div class="software-card">
-                <div class="software-header">
-                    <h2>expam</h2>
-                    <a href="https://github.com/seansolari/expam" target="_blank" class="github-btn">View on GitHub</a>
+                <div class="software-card-accent"></div>
+                <div class="software-card-body">
+                    <div class="software-card-top">
+                        <h2>expam</h2>
+                    </div>
+                    <p>Phylogenetic Analysis of Shotgun Metagenomic Data. High-resolution analysis of metagenomes using distance trees.</p>
+                    <div class="software-meta">
+                        <a href="https://github.com/seansolari/expam" target="_blank" class="github-link">
+                            <svg height="14" viewBox="0 0 16 16" width="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                            github.com/seansolari/expam
+                        </a>
+                        <span class="dev-tag">Lead developer: <span>SM Solari</span></span>
+                    </div>
                 </div>
-                <p>Phylogenetic Analysis of Shotgun Metagenomic Data. High-resolution analysis of metagenomes using distance trees.</p>
             </div>
 
             <div class="software-card">
-                <div class="software-header">
-                    <h2>metaphor</h2>
-                    <a href="https://github.com/vinisalazar/metaphor" target="_blank" class="github-btn">View on GitHub</a>
+                <div class="software-card-accent"></div>
+                <div class="software-card-body">
+                    <div class="software-card-top">
+                        <h2>metaphor</h2>
+                    </div>
+                    <p>A streamlined workflow and metagenomics pipeline for the assembly and binning of short reads.</p>
+                    <div class="software-meta">
+                        <a href="https://github.com/vinisalazar/metaphor" target="_blank" class="github-link">
+                            <svg height="14" viewBox="0 0 16 16" width="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                            github.com/vinisalazar/metaphor
+                        </a>
+                        <span class="dev-tag">Lead developer: <span>VW Salazar</span></span>
+                    </div>
                 </div>
-                <p>Metaphor: A streamlined workflow and metagenomics pipeline for the assembly and binning of short reads.</p>
             </div>
+
+            <div class="software-card">
+                <div class="software-card-accent"></div>
+                <div class="software-card-body">
+                    <div class="software-card-top">
+                        <h2>ChloroScan</h2>
+                    </div>
+                    <p>A bioinformatics pipeline to recover eukaryotic plastid genome bins from metagenomic data, using deep learning contig classification and a curated plastid marker gene database to guide binning.</p>
+                    <div class="software-meta">
+                        <a href="https://github.com/Andyargueasae/chloroscan" target="_blank" class="github-link">
+                            <svg height="14" viewBox="0 0 16 16" width="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                            github.com/Andyargueasae/chloroscan
+                        </a>
+                        <span class="dev-tag">Lead developer: <span>Y Tong</span></span>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 
     <footer>
         <div class="container footer-content">
-</div>
+        </div>
     </footer>
 </body>
 </html>
