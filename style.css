@@ -1,39 +1,47 @@
-/* Custom Modern Theme for Hologenomics Site */
+/* MiNet Lab — Lively Yet Soothing theme */
+/* Palette: warm ivory bg, sage green primary, terracotta accent, slate text */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
 :root {
-    --primary-color: #1e3a8a; /* Deep Slate Blue */
-    --accent-color: #0d9488;  /* Teal */
-    --text-dark: #1f2937;     /* Charcoal */
-    --text-light: #4b5563;    /* Muted Gray */
-    --bg-light: #f8fafc;      /* Clean White/Gray Off-base */
-    --border-color: #e2e8f0;
+    --sage:       #5C7A6B;   /* primary — sage green */
+    --sage-dark:  #3D5449;   /* deeper sage for hover */
+    --sage-light: #EAF0EC;   /* very pale sage tint */
+    --terra:      #C4694A;   /* accent — terracotta */
+    --terra-light:#F7EDE8;   /* pale terracotta tint */
+    --cream:      #F7F4EE;   /* page background */
+    --cream-dark: #EDE8DF;   /* card/section bg */
+    --text-dark:  #2D2A25;   /* near-black warm */
+    --text-mid:   #5A5650;   /* paragraph text */
+    --text-light: #8A847C;   /* muted text */
+    --border:     #DDD8CF;   /* subtle warm border */
+    --white:      #FDFCF9;   /* warm white for cards */
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
     color: var(--text-dark);
-    background-color: #ffffff;
-    line-height: 1.6;
+    background-color: var(--cream);
+    line-height: 1.65;
+    font-weight: 300;
 }
 
+/* ─── Container ─── */
 .container {
     max-width: 1050px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* Header & Navigation */
+/* ─── Header ─── */
 header {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
+    background: rgba(247, 244, 238, 0.94);
+    backdrop-filter: blur(8px);
     z-index: 100;
 }
 
@@ -43,72 +51,86 @@ header {
     align-items: center;
     max-width: 1050px;
     margin: 0 auto;
-    padding: 1.2rem 2rem;
+    padding: 1.1rem 2rem;
 }
 
 .logo {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--sage-dark);
     text-decoration: none;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.3px;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--text-light);
-    font-weight: 500;
-    margin-left: 1.8rem;
+    color: var(--text-mid);
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin-left: 2rem;
     transition: color 0.2s;
+    letter-spacing: 0.2px;
 }
 
 nav a:hover, nav a.active {
-    color: var(--accent-color);
+    color: var(--terra);
 }
 
-/* Hero Elements */
+/* ─── Hero ─── */
 .hero {
-    padding: 5rem 0 3rem 0;
+    padding: 5rem 0 2.5rem;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    letter-spacing: -1px;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: var(--sage-dark);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
 }
 
 .subtitle {
-    font-size: 1.25rem;
-    color: var(--accent-color);
-    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--terra);
+    font-weight: 400;
     margin-bottom: 1.5rem;
-}
-
-.tagline {
     font-style: italic;
-    color: var(--text-light);
 }
 
-/* Intro and Layout Blocks */
+/* ─── Intro box ─── */
 .intro-box {
-    background: var(--bg-light);
-    border-left: 4px solid var(--primary-color);
-    padding: 2rem;
-    border-radius: 4px;
-    font-size: 1.1rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--sage);
+    padding: 2rem 2.2rem;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    color: var(--text-mid);
     margin-bottom: 4rem;
+    line-height: 1.75;
 }
 
+/* ─── Headings ─── */
 h2 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: var(--sage-dark);
     margin-bottom: 1.5rem;
+    letter-spacing: -0.2px;
 }
 
-/* Grid Design */
+h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+/* ─── Grid + Cards ─── */
 .grid, .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -116,96 +138,264 @@ h2 {
     margin-bottom: 4rem;
 }
 
-.card, .software-card, .member-card {
-    border: 1px solid var(--border-color);
-    padding: 1.8rem;
-    border-radius: 6px;
-    background: #fff;
-    transition: transform 0.2s, box-shadow 0.2s;
+.card, .member-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    transition: transform 0.22s, box-shadow 0.22s;
+    overflow: hidden;
 }
 
-.card:hover, .software-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px -6px rgba(61, 84, 73, 0.12);
 }
 
 .card h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.75rem;
-    font-size: 1.2rem;
+    color: var(--sage-dark);
+    margin-bottom: 0.6rem;
 }
 
-/* Concept / Hologenomics block */
+.card p {
+    color: var(--text-mid);
+    font-size: 0.95rem;
+}
+
+/* ─── Research cards (with figures) ─── */
+.research-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.research-figure {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    height: 200px;
+    border-bottom: 1px solid var(--border);
+}
+
+.research-figure img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.research-card h3,
+.research-card p {
+    padding: 0 1.5rem;
+}
+
+.research-card h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.research-card p {
+    margin-bottom: 1.5rem;
+}
+
+/* ─── Concept block ─── */
 .concept-block {
-    background: #f1f5f9;
+    background: var(--sage-light);
+    border: 1px solid #C8D8CC;
     padding: 2.5rem;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 4rem;
 }
 
 .etymology {
-    font-size: 1.05rem;
-    color: var(--accent-color);
+    font-size: 1rem;
+    color: var(--terra);
     margin-bottom: 1rem;
+    font-style: italic;
 }
 
-/* Software Specifics */
+.concept-block p:last-child {
+    color: var(--text-mid);
+    font-size: 0.97rem;
+}
+
+/* ─── Page title ─── */
+.page-title {
+    padding: 3.5rem 0 1.5rem;
+}
+
+.page-title h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--sage-dark);
+    margin-bottom: 0.5rem;
+}
+
+.page-title .subtitle {
+    font-style: normal;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.page-title .subtitle a {
+    color: var(--terra);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* ─── Publications ─── */
+.publications-list {
+    padding-bottom: 3rem;
+}
+
+.year-block {
+    margin-bottom: 3rem;
+}
+
+.year-block h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--sage-light);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.year-block h2::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 40px; height: 2px;
+    background: var(--terra);
+}
+
+.pub-list { list-style: none; }
+
+.pub-list li {
+    margin-bottom: 1.15rem;
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--cream-dark);
+    color: var(--text-mid);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    transition: border-color 0.2s;
+}
+
+.pub-list li:hover {
+    border-left-color: var(--terra);
+}
+
+.pub-list li strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* ─── Software ─── */
 .software-grid {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
     margin-top: 2rem;
+    padding-bottom: 3rem;
 }
 
-.software-header {
+.software-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+}
+
+.software-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -5px rgba(61, 84, 73, 0.1);
+}
+
+.software-card-accent {
+    width: 5px;
+    flex-shrink: 0;
+    background: var(--sage);
+}
+
+.software-card-body {
+    padding: 1.5rem 1.8rem;
+    flex: 1;
+}
+
+.software-card-top { margin-bottom: 0.4rem; }
+
+.software-card-top h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    color: var(--sage-dark);
+}
+
+.software-card p {
+    color: var(--text-mid);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.software-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     align-items: center;
-    margin-bottom: 0.75rem;
-}
-
-.github-btn {
-    padding: 0.4rem 0.9rem;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    text-decoration: none;
-    border-radius: 4px;
     font-size: 0.85rem;
-    font-weight: 500;
-    transition: all 0.2s;
+    color: var(--text-light);
 }
 
-.github-btn:hover {
-    background: var(--accent-color);
-    color: white;
+.software-meta .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-family: 'DM Mono', 'Courier New', monospace;
+    font-size: 0.83rem;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 0.25rem 0.65rem;
+    transition: border-color 0.2s, color 0.2s;
 }
 
-/* People Styles */
+.software-meta .github-link:hover {
+    border-color: var(--terra);
+    color: var(--terra);
+}
+
+.dev-tag { color: var(--text-light); font-size: 0.85rem; }
+.dev-tag span { color: var(--text-mid); font-weight: 500; }
+
+/* ─── People ─── */
 .pi-profile {
-    padding: 4rem 0 2rem 0;
+    padding: 3.5rem 0 2rem;
     display: flex;
     gap: 2.5rem;
     align-items: flex-start;
     margin-bottom: 3rem;
 }
 
-.pi-photo-wrapper {
-    flex-shrink: 0;
-}
+.pi-photo-wrapper { flex-shrink: 0; }
 
 .pi-photo {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--border-color);
+    border: 3px solid var(--border);
 }
 
 .pi-title {
-    font-size: 1.2rem;
-    color: var(--accent-color);
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--terra);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    font-style: italic;
 }
 
 .identity-tags {
@@ -216,11 +406,12 @@ h2 {
 
 .contact-box {
     margin-top: 1rem;
-    background: var(--bg-light);
+    background: var(--cream);
     padding: 0.75rem 1rem;
     display: inline-block;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
 }
 
 .member-photo {
@@ -228,8 +419,8 @@ h2 {
     height: 200px;
     object-fit: cover;
     object-position: top;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+    border-radius: 0;
+    margin-bottom: 0;
     display: block;
 }
 
@@ -238,86 +429,74 @@ h2 {
     flex-direction: column;
 }
 
+.member-card-body {
+    padding: 1.1rem 1.3rem 1.3rem;
+}
+
 .member-card strong {
-    margin-bottom: 0.25rem;
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.member-card p {
+    color: var(--text-mid);
+    font-size: 0.9rem;
 }
 
 .opportunities-box {
-    background: #fff;
-    border: 2px dashed var(--accent-color);
-    padding: 2.5rem;
-    border-radius: 8px;
+    background: var(--terra-light);
+    border: 1px solid #E0B9AB;
+    padding: 2.2rem;
+    border-radius: 10px;
     margin-bottom: 5rem;
 }
 
-.opportunities-box h2 {
-    color: var(--accent-color);
+.opportunities-box h2 { color: var(--terra); }
+.opportunities-box p { margin-bottom: 1rem; color: var(--text-mid); }
+
+/* ─── Team section ─── */
+.team-section { margin-bottom: 3rem; }
+.contact-section { margin-bottom: 3rem; }
+.contact-section .contact-box { margin-bottom: 1.5rem; }
+
+/* ─── Buttons ─── */
+.github-btn {
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--sage);
+    color: var(--sage);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
 }
 
-.opportunities-box p {
-    margin-bottom: 1rem;
+.github-btn:hover {
+    background: var(--sage);
+    color: white;
 }
 
-/* Publications Styles */
-.year-block {
-    margin-bottom: 3rem;
-}
-
-.year-block h2 {
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
-}
-
-.pub-list {
-    list-style-type: none;
-}
-
-.pub-list li {
-    margin-bottom: 1.2rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--border-color);
-}
-
-/* Footer layout */
+/* ─── Footer ─── */
 footer {
-    background: var(--bg-light);
-    padding: 3rem 0;
-    border-top: 1px solid var(--border-color);
-    font-size: 0.9rem;
+    background: var(--cream-dark);
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.88rem;
     color: var(--text-light);
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-.acknowledgement {
-    max-width: 700px;
-}
-
+/* ─── Responsive ─── */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    nav a {
-        margin: 0 0.8rem;
-    }
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-}
-.team-section {
-    margin-bottom: 3rem;
-}
-
-.contact-section {
-    margin-bottom: 3rem;
-}
-
-.contact-section .contact-box {
-    margin-bottom: 1.5rem;
+    .nav-container { flex-direction: column; gap: 1rem; }
+    nav a { margin: 0 0.8rem; }
+    .hero h1 { font-size: 2.4rem; }
+    .pi-profile { flex-direction: column; }
 }

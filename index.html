@@ -6,49 +6,56 @@
     <title>Microbial Networks Lab | MiNet Lab</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .research-card {
-            display: flex;
-            flex-direction: column;
+        .hero {
+            position: relative;
             padding: 0;
-            overflow: hidden;
+            text-align: center;
+            background: none;
+            margin-bottom: 2.5rem;
         }
-
-        .research-figure {
-            background: var(--bg-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-            height: 200px;
-            border-bottom: 1px solid var(--border-color);
+        .hero-bg {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            opacity: 0.75;
         }
-
-        .research-figure img {
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-            image-rendering: -webkit-optimize-contrast;
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(247, 244, 238, 0.15) 0%,
+                rgba(247, 244, 238, 0.55) 1%,
+                rgba(247, 244, 238, 0.95) 100%
+            );
         }
-
-        .research-card h3,
-        .research-card p {
-            padding: 0 1.5rem;
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            padding: 0 2rem;
         }
-
-        .research-card h3 {
-            margin-top: 1.2rem;
-            margin-bottom: 0.5rem;
+        .hero-subtitle {
+            position: absolute;
+            bottom: 4.0rem;
+            left: 0;
+            right: 0;
+            padding: 0 2rem;
+            text-align: center;
         }
-
-        .research-card p {
-            margin-bottom: 1.5rem;
+        .research-section {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">MiNet Lab</Label></a>
+            <a href="index.html" class="logo">MiNet Lab</a>
             <nav>
                 <a href="index.html" class="active">Home</a>
                 <a href="software.html">Software</a>
@@ -60,11 +67,17 @@
 
     <main class="container">
         <section class="hero">
-            <h1>Microbial Networks Lab</h1>
-            <p class="subtitle">Unveiling the interconnectedness of organisms across space and time</p>
+            <img class="hero-bg" src="images/MiNet.webp" alt="Microbial network illustration showing interconnected microorganism communities">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1>Microbial Networks Lab</h1>
+            </div>
+            <div class="hero-subtitle">
+                <p class="subtitle">Unveiling the interconnectedness of organisms across space and time</p>
+            </div>
         </section>
 
-        <section class="intro-box">
+        <section class="intro-box" style="margin-top: -1.5rem;">
             <p>Why are organisms where they are, and why do they do what they do? Our work applies an ecological and computational perspective to investigate how microbial communities — and the complex networks that connect them — shape the health of their hosts and ecosystems.</p>
         </section>
 
@@ -87,7 +100,7 @@
                 </div>
                 <div class="card research-card">
                     <div class="research-figure">
-                        <img src="images/manipulation.png" alt="Microbiome selection and engineering illustration">
+                        <img src="images/manipulation.jpg" alt="Microbiome selection and engineering illustration">
                     </div>
                     <h3>Microbiome Selection & Engineering</h3>
                     <p>Combining bioinformatics and experiments to guide microbiome manipulation.</p>
@@ -102,10 +115,5 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <p class="credits">Banner drawing by Ekaterina Nikolaenko</p>
-        </div>
-    </footer>
 </body>
 </html>
