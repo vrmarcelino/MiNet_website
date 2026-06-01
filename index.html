@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microbial Networks Lab | MiNet Lab</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .research-card {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .research-figure {
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            height: 200px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .research-figure img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .research-card h3,
+        .research-card p {
+            padding: 0 1.5rem;
+        }
+
+        .research-card h3 {
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .research-card p {
+            margin-bottom: 1.5rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -32,15 +71,24 @@
         <section class="research-section">
             <h2>Research Areas</h2>
             <div class="grid">
-                <div class="card">
+                <div class="card research-card">
+                    <div class="research-figure">
+                        <img src="images/interactions.png" alt="Microbial nutritional interaction network diagram">
+                    </div>
                     <h3>Nutritional interactions in microbiomes</h3>
                     <p>Using metabolic modelling to unveil microbial food-webs.</p>
                 </div>
-                <div class="card">
+                <div class="card research-card">
+                    <div class="research-figure">
+                        <img src="images/Venn.png" alt="Venn diagram of host-microbe interactions across animals">
+                    </div>
                     <h3>Host-microbe interactions in evolution</h3>
                     <p>From diversity of symbionts to trait evolution.</p>
                 </div>
-                <div class="card">
+                <div class="card research-card">
+                    <div class="research-figure">
+                        <img src="images/manipulation.png" alt="Microbiome selection and engineering illustration">
+                    </div>
                     <h3>Microbiome Selection & Engineering</h3>
                     <p>Combining bioinformatics and experiments to guide microbiome manipulation.</p>
                 </div>
