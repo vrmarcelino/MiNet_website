@@ -446,14 +446,14 @@ h3 {
 }
 
 .opportunities-box {
-    background: var(--terra-light);
-    border: 1px solid #E0B9AB;
+    background: var(--sage-light);
+    border: 1px solid #C8D8CC;
     padding: 2.2rem;
     border-radius: 10px;
     margin-bottom: 5rem;
 }
 
-.opportunities-box h2 { color: var(--terra); }
+.opportunities-box h2 { color: var(--text-dark); }
 .opportunities-box p { margin-bottom: 1rem; color: var(--text-mid); }
 
 /* ─── Team section ─── */
