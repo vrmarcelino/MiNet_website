@@ -47,6 +47,37 @@
             padding: 0 2rem;
             text-align: center;
         }
+        @media (max-width: 600px) {
+            .hero {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 220px;
+            }
+            .hero-bg {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .hero-text,
+            .hero-subtitle {
+                position: relative;
+                top: auto;
+                bottom: auto;
+                transform: none;
+                z-index: 1;
+                padding: 0 1rem;
+            }
+            .hero-text {
+                margin-top: 1rem;
+            }
+            .hero-subtitle {
+                margin-bottom: 1rem;
+            }
+        }
         .research-section {
             margin-bottom: 1rem;
         }
